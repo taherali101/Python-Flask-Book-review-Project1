@@ -7,21 +7,24 @@
 {% block content %}
 
 <h3>Search Results</h3>
-<div class="dropdown-divider"></div>
 
-<div class="container results-container">
+<div class="container" style="display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: baseline;">
     
     {% for book in books %}
-        <div class="card border-primary mb-3" style="width: 12rem">
-            <div class="card-body">
-                <h4 class="card-title">{{book['title']}}</h4>
-                <h6> by </h6>
-                <h6 class="card-text">{{book['author']}}</h6>
-            </div>
-            <div class="card-footer">
-                <a href="/book/{{book['isbn']}}" class="card-link">Go to book page</a>
-            </div>
+    <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header" style="float:left;text-align:center;">{{book['title']}}</div>
+        <div class="card-body" style="float:left;text-align:center;">
+            <h5> by </h5>
+            <h5 class="card-text">{{book['author']}}</h5>
         </div>
+        <div class="card-footer" style="text-align: center;">
+            <a href="/book/{{book['isbn']}}" class="card-link">Go to book page</a>
+        </div>
+      </div>
     {% endfor %}
 </div>
 {% endblock %}
