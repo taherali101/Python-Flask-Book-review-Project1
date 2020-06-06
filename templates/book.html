@@ -56,11 +56,11 @@
         </form>
 
         <!-- REVIEW LIST -->
-        <div id="userReviews">
+        <div id="userReviews" style="background-color:#ad8059;border-color: #914300;">
             {% for review in reviews %}
             <div class="list-group" style="background-color:#ad8059;border-color: #914300;">
-                <li class="list-group-item text-white list-group-item-action flex-column align-items-start">
-                    <div class="d-flex text-white w-100 justify-content-between">
+                <li class="list-group-item text-white list-group-item-action flex-column align-items-start" style="background-color:#ad8059;border-color: #914300;">
+                    <div class="d-flex text-white w-100 justify-content-between" style="background-color:#ad8059;border-color: #914300;">
                         <h3 class="mb-1" >{{review['username']}} said...</h3>
                         <small>{{review['time']}}</small>
                         <div class="dropdown-divider" style="color:#914300"></div> 
