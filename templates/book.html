@@ -45,8 +45,6 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                </div>
-                <div class="form-group col-sm-6">
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span>Say something</span>
@@ -59,19 +57,18 @@
         </form>
 
         <!-- REVIEW LIST -->
-        <div id="userReviews">
+        <div id="userReviews" class="bg-transparent">
             <h2></h2>
             {% for review in reviews %}
-            <div class="list-group">
+            <div class="list-group bg-transparent">
                 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
+                    <div class="d-flex bg-transparent w-100 justify-content-between">
                         <h6 class="mb-1" style="color:burlywood">{{review['username']}} said...</h6>
                         <small>{{review['time']}}</small>
                     </div>
                     <p class="mb-1">{{review['comment']}}</p>
                     <small>Rated: {{review['rating']}}</small>
                 </a>
-                <div class="dropdown-divider"></div>
             </div>
             {% endfor %}
         </div>
