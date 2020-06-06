@@ -37,6 +37,10 @@ $ export DATABASE_URL = Heroku Postgres DB URI
 $ export GOODREADS_KEY = Goodreads API Key. # More info: https://www.goodreads.com/api
 ```
 
+## Steps to run
+# 1.First run python import.py
+# 2.flask run
+
 ### DB Schema
 
 Feel free to add your own improvements!
