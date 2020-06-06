@@ -5,36 +5,19 @@ main .form-control {
   /* override Bootstrap's 100% width for form controls */
   width: auto;
 }
-
-.container {
-  width: 100%;
-  height: 100%;
-  font-family: "Baskervville";
-  margin: 0;
-}
-.form {
-  background-color: #6e5114;
-  width: 500px;
-  height: 500px;
-  margin-right: 700px;
-  border-radius: 5px;
-  margin-top: 100px;
-  margin-left: 100px;
-  box-shadow: 20px 20px 10px grey;
-}
-.form-group,
-.form-check,
-.btn {
-  width: 300px;
-  margin-left: 100px;
-}
-form {
-  padding-top: 50px;
-}
-.btn {
-  margin-top: 30px;
-}
-
+a:link {
+    color: #ad9218;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #5a5632;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
 .card-body {
   text-align: start;
 }
