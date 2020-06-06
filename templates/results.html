@@ -6,7 +6,7 @@ Results
 
 {% block content %}
 
-<h3>Search Results</h3>
+<h2>Search Results</h2>
 
 <div class="container" style="display: flex;
 flex-direction: row;
@@ -15,15 +15,15 @@ justify-content: space-around;
 align-items: baseline;">
 
 {% for book in books %}
-    <div class="card mb-3 border-warning" style="width: 16rem; height:26rem;">
-        <div class="card-header bg-warning border-white text-white" style="font-size:medium;">{{book['title']}}</div>
-        <div class="card-body bg-warning text-white">
+    <div class="card mb-3 " style="width: 16rem; height:26rem;background-color: #ad8059;border-color: #914300;">
+        <div class="card-header text-white" style="font-size:medium;border-color: #914300;">{{book['title']}}</div>
+        <div class="card-body text-white">
             <h4 class="card-title">{{book['author']}}</h4>
             <h6 class="card-title">{{book['year']}}</h6>
             <h6 class="card-title">{{book['isbn']}}</h6>
         </div>
-        <div class="card-footer bg-transparent border-warning text-warning">
-            <a href="/book/{{book['isbn']}}" class="card-link">Go to book page</a>
+        <div class="card-footer bg-transparent " style="border-color: #914300;">
+            <a href="/book/{{book['isbn']}}" class="card-link" style="color:#ad8059;">Go to book page</a>
         </div>
     </div>
 
