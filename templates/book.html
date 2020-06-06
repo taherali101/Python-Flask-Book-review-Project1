@@ -8,15 +8,17 @@
 
     <div class="row book-container">
         <div class="col-sm-4">
-            <img src="http://covers.openlibrary.org/b/isbn/{{bookInfo[0]['isbn']}}-M.jpg" width="130px">    
+            <img src="http://covers.openlibrary.org/b/isbn/{{bookInfo[0]['isbn']}}-M.jpg" style="border: 1in;border-color: black;" width="130px">    
         </div>
-        <div class="col-sm-4">
-            <h1>{{bookInfo[0]['title']}}</h1>
-            <h5>Author: {{bookInfo[0]['author']}}</h5>
-            <h5>Published: {{bookInfo[0]['year']}}</h5>
-            <h5>ISBN-10: {{bookInfo[0]['isbn']}}</h5>
-        </div>
-
+        <div class="container" style="display: flex;text-align: center;justify-content: center;width: 50%;height: 50%;" >
+            <div id="home" style="text-align: center;margin-top: 40px;" >
+                <h1 style="color: #d17e00;">{{bookInfo[0]['title']}}</h1>
+                <h4 style="color: #d17e00;">Author: {{bookInfo[0]['author']}}</h4>
+                <h4 style="color: #d17e00;">Published: {{bookInfo[0]['year']}}</h4>
+                <h4 style="color: #d17e00;">ISBN-10: {{bookInfo[0]['isbn']}}</h4>  
+            </div>
+          </div>
+    
         <!--GOODREADS REVIEWS -->
         <div class="col-sm-4">
             <img class="mb-3" src="../static/goodreads.jpg" alt="Goodreads" width="200" height="45">
@@ -27,8 +29,6 @@
             </h5>
         </div>
     </div>
-    <div class="dropdown-divider"></div>
-
     <h4 class="alert alert-warning">Users Reviews</h4>
     <h3>Make your own review!</h3>
 
