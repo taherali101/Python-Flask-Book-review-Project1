@@ -14,10 +14,12 @@ file = open("books.csv")
 
 reader = csv.reader(file)
 def main():
+    # these commands are just used to fix mistakes!!
+
     # db.execute("DROP TABLE users;")
     # db.execute("DROP TABLE reviews;")
     # db.execute("DROP TABLE books;")
-#     db.execute("ALTER TABLE users RENAME COLUMN password TO hash;")
+    # db.execute("ALTER TABLE users RENAME COLUMN password TO hash;")
 # print(f"DELETED FROM database.")
 # db.commit()
     
