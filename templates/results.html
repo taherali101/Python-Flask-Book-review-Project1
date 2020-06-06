@@ -18,10 +18,10 @@ align-items: baseline;">
 
     {% for book in books %}
  
-    <div class="card border-dark bg-dark text-white">
+    <div class="card text-dark">
         <img class="card-img" src="../static/book1.jpg" alt="Card image" style="border-radius: 8px;max-height:348px;max-width: 260px;">
-        <div class="card-img-overlay border-dark">
-            <div class="card-header border-dark" style="font-size:medium;">{{book['title']}}</div>
+        <div class="card-img-overlay ">
+            <div class="card-header " style="font-size:medium;">{{book['title']}}</div>
             <h4 class="card-title">{{book['author']}}</h4>
             <h6 class="card-title">{{book['year']}}</h6>
             <h6 class="card-title">{{book['isbn']}}</h6>
