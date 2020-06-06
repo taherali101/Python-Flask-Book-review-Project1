@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Results
+Results
 {% endblock %}
 
 {% block content %}
@@ -13,19 +13,24 @@ flex-direction: row;
 flex-wrap: wrap;
 justify-content: space-around;
 align-items: baseline;">
-    
-   
 
-{% for book in books %}
-    <div class="card text-dark">
-        <img class="card-img" src="../static/books1.jpg" alt="Card image" >
-        <div class="card-img-overlay ">
-            <div class="card-header " style="font-size:medium;">{{book['title']}}</div>
-            <h4 class="card-title">{{book['author']}}</h4>
-            <h6 class="card-title">{{book['year']}}</h6>
-            <h6 class="card-title">{{book['isbn']}}</h6>
+
+
+    {% for book in books %}
+        <div class="card text-dark">
+            <img class="card-img" src="../static/books1.jpg" alt="Card image">
+            <div class="card-img-overlay ">
+                <div class="card-header " style="font-size:medium;">{{book['title']}}</div>
+                <h4 class="card-title">{{book['author']}}</h4>
+                <h6 class="card-title">{{book['year']}}</h6>
+                <h6 class="card-title">{{book['isbn']}}</h6>
+            </div>
         </div>
-      </div>
+        <div class="card-footer text-info border-info">
+            <a href="/book/{{book['isbn']}}" class="card-link">Go to book page</a>
+        </div>
+
+
 <!-- 
     <div class="card border-info mb-3" style="max-width: 12rem;">
         <div class="card-header bg-info border-info" style="color:black;font-size:medium;">{{book['title']}}</div>
@@ -34,10 +39,6 @@ align-items: baseline;">
             <h6 class="card-title">{{book['year']}}</h6>
             <h6 class="card-title">{{book['isbn']}}</h6>
         </div> -->
-        <div class="card-footer text-info border-info">
-            <a href="/book/{{book['isbn']}}" class="card-link">Go to book page</a>
-        </div>
-      </div>
 
 <!-- 
     <div class="card border-info mb-3" style="max-width: 16rem;">
