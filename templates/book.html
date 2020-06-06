@@ -16,14 +16,6 @@
                 <h4 style="color: whitesmoke;">Author: {{bookInfo[0]['author']}}</h4>
                 <h4 style="color: whitesmoke;">Published: {{bookInfo[0]['year']}}</h4>
                 <h4 style="color: whitesmoke;">ISBN-10: {{bookInfo[0]['isbn']}}</h4>  
-                {% if goodreads_data['average_rating'] != '' %}
-                <hr>
-                <h5 class="card-title">From GoodReads.com</h5>
-                <ul>
-                  <li>Ratings count: {{goodreads_data['ratings_count']}}</li>
-                  <li>Ratings average: {{goodreads_data['average_rating']}}</li>
-                </ul>
-              {%endif%}
             </div>
           </div>
     
