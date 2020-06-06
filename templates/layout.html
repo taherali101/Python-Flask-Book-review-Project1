@@ -20,18 +20,18 @@
 </head>
 
 <body style="background-image: url('/static/iStock.jpg');background-attachment: fixed;background-repeat: no-repeat;background-size: cover;background-position: center center;">
-    <nav class="navbar navbar-expand-lg bg-light" style="background-color:#ad8059;">
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#ad8059;">
           <div class="navbar-header">
             <a class="navbar-brand">Book Review App</a>
           </div>
           <div class="collapse navbar-collapse">
             {% if session.user_id %}
             <ul class="nav navbar-nav mr-auto">
-                <a class="navbar-brand"> Hello {{ session.user_name }} !!</a>
                 <li class="nav-item active">
                     <a href="/"  style="color:black"><span class="glyphicon glyphicon-search"></span>Search<span class="sr-only"></span></a>
                 </li>
             </ul>
+            <a class="navbar-brand justify-content-center"> Hello {{ session.user_name }} !!</a>
             <ul class="nav navbar-nav navbar-right ml-auto"> 
                 <li class="nav-item">
                     <a href="/logout" class="nav-link" style="color:black"><span class="glyphicon glyphicon-log-out"></span>Log Out</a>
