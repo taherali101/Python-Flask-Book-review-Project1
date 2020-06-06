@@ -15,9 +15,9 @@ justify-content: space-around;
 align-items: baseline;">
 
 {% for book in books %}
-    <div class="card bg-info mb-3 " style="max-width: 16rem;">
+    <div class="card mb-3 border-info" style="max-width: 16rem;">
         <div class="card-header bg-info border-white text-white" style="font-size:medium;">{{book['title']}}</div>
-        <div class="card-body bg-info bg-info text-white">
+        <div class="card-body bg-info text-white">
             <h4 class="card-title">{{book['author']}}</h4>
             <h6 class="card-title">{{book['year']}}</h6>
             <h6 class="card-title">{{book['isbn']}}</h6>
