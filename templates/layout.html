@@ -28,13 +28,15 @@
             {% if session.user_id %}
             <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a href="/" class="nav-link" style="color:black">Search <span class="sr-only"></span></a>
+                    <a href="/" class="nav-link" style="color:black"><span class="glyphicon glyphicon-search"></span>Search<span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" style="color:black">{{ session.user_name }}</a>
+                    <a href="#" class="nav-link" style="color:black"> Hello {{ session.user_name }} !!</a>
                 </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right ml-auto"> 
                 <li class="nav-item">
-                    <a href="/logout" class="nav-link" style="color:black">Log Out</a>
+                    <a href="/logout" class="nav-link" style="color:black"><span class="glyphicon glyphicon-log-out"></span>Log Out</a>
                 </li>
             </ul>
                 {% else %}
