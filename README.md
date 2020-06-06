@@ -38,8 +38,8 @@ $ export GOODREADS_KEY = Goodreads API Key. # More info: https://www.goodreads.c
 ```
 
 ## Steps to run
-# 1.First run python import.py
-# 2.flask run
+### 1.First run python import.py
+### 2.flask run
 
 ### DB Schema
 
