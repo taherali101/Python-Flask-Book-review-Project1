@@ -10,12 +10,12 @@
         <div class="col-sm-4">
             <img src="http://covers.openlibrary.org/b/isbn/{{bookInfo[0]['isbn']}}-M.jpg" style="border: 1in;border-color: black;" width="130px">    
         </div>
-        <div class="container" style="display: flex;text-align: center;justify-content: center;width: 50%;height: 50%;" >
+        <div class="container" style="display: flex;text-align: center;justify-content: center;width: 300px;height:300px ;" >
             <div id="home" style="text-align: center;margin-top: 40px;" >
-                <h1 style="color: #d17e00;">{{bookInfo[0]['title']}}</h1>
-                <h4 style="color: #d17e00;">Author: {{bookInfo[0]['author']}}</h4>
-                <h4 style="color: #d17e00;">Published: {{bookInfo[0]['year']}}</h4>
-                <h4 style="color: #d17e00;">ISBN-10: {{bookInfo[0]['isbn']}}</h4>  
+                <h1 style="color: whitesmoke;">{{bookInfo[0]['title']}}</h1>
+                <h4 style="color: whitesmoke;">Author: {{bookInfo[0]['author']}}</h4>
+                <h4 style="color: whitesmoke;">Published: {{bookInfo[0]['year']}}</h4>
+                <h4 style="color: whitesmoke;">ISBN-10: {{bookInfo[0]['isbn']}}</h4>  
             </div>
           </div>
     
@@ -37,7 +37,7 @@
         <form method="POST" class="form-border">
             <div class="form-row">
                 <div class="form-group col-sm">
-                    <label for="rating" class="alert alert-warning mb-3">Rate this book</label>
+                    <label for="rating" class="alert alert-warning sb-3">Rate this book</label>
                     <select id="rating" name="rating" class="form-control" required>
                         <option value="1">1</option>
                         <option value="2">2</option>
