@@ -15,14 +15,14 @@ justify-content: space-around;
 align-items: baseline;">
 
 {% for book in books %}
-    <div class="card mb-3 border-info" style="width: 16rem; height:26rem;">
-        <div class="card-header bg-info border-white text-white" style="font-size:medium;">{{book['title']}}</div>
-        <div class="card-body bg-info text-white">
+    <div class="card mb-3 border-warning" style="width: 16rem; height:26rem;">
+        <div class="card-header bg-warning border-white text-white" style="font-size:medium;">{{book['title']}}</div>
+        <div class="card-body bg-warning text-white">
             <h4 class="card-title">{{book['author']}}</h4>
             <h6 class="card-title">{{book['year']}}</h6>
             <h6 class="card-title">{{book['isbn']}}</h6>
         </div>
-        <div class="card-footer bg-transparent border-info text-info">
+        <div class="card-footer bg-transparent border-warning text-warning">
             <a href="/book/{{book['isbn']}}" class="card-link">Go to book page</a>
         </div>
     </div>
