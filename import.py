@@ -13,15 +13,26 @@ db = scoped_session(sessionmaker(bind=engine))
 file = open("books.csv")
 
 reader = csv.reader(file)
+def main():
+    # db.execute("DROP TABLE users;")
+    # db.execute("DROP TABLE reviews;")
+    # db.execute("DROP TABLE books;")
+#     db.execute("ALTER TABLE users RENAME COLUMN password TO hash;")
+# print(f"DELETED FROM database.")
+# db.commit()
+    
+    db.execute("CREATE TABLE users (id SERIAL PRIMARY KEY NOT NULL, username TEXT NOT NULL, hash TEXT NOT NULL)")
+    db.execute("CREATE TABLE books (id SERIAL PRIMARY KEY NOT NULL, isbn VARCHAR(10) NOT NULL, title TEXT NOT NULL,author TEXT NOT NULL, year VARCHAR(4) NOT NULL)")
+    db.execute("CREATE TABLE reviews (id SERIAL PRIMARY KEY NOT NULL, user_id INT NOT NULL,book_id INT NOT NULL, comment TEXT NOT NULL, rating INT NOT NULL,time TIMESTAMP(6))")
+    
 
-for isbn, title, author, year in reader:
+    f=open("books.csv")
+    reader =csv.reader(f)
+    for isbn,title,author,year in reader:
+    	db.execute("INSERT INTO books (isbn, title, author, year) VALUES (:a,:b,:c,:d)",{"a":isbn,"b":title,"c":author,"d":year})
+                   
+    	print(f"Added {title} to the database")
+        db.commit() 
 
-    db.execute("INSERT INTO books (isbn, title, author, year) VALUES (:isbn, :title, :author, :year)",
-                {"isbn": isbn, 
-                 "title": title,
-                 "author": author,
-                 "year": year})
-
-    print(f"Added book {title} to database.")
-
-    db.commit()
+if __name__ == "__main__":
+	main()

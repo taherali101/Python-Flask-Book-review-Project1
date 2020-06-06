@@ -128,7 +128,7 @@ def register():
         hashedPassword = generate_password_hash(request.form.get("password"), method='pbkdf2:sha256', salt_length=8)
         
         # Insert register into DB
-        db.execute("INSERT INTO users (username, hash) VALUES (:username, :password)",
+        db.execute("INSERT INTO users (username, password) VALUES (:username, :password)",
                             {"username":request.form.get("username"), 
                              "password":hashedPassword})
 
