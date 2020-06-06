@@ -1,31 +1,37 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block title %} Register {% endblock %} {% block
+content %}
 
-{% block title %}
-    Register
-{% endblock %}
-
-{% block content %}
-
-<div class="container" style=" width: 100%;height: 100%;font-family: 'Baskervville';margin: 0;">
-    <div class="form" style="background-color: #6e5114;width: 300px;height: 300px;margin-right: 600px;border-radius: 5px;margin-top: 0px;margin-left: 100px;box-shadow: 20px 20px 10px #2e1f00;">
+<div class="container" style="width: 100%; height: 100%; font-family: 'Baskervville'; margin: 0;">
+  <div class="form" style="
+      background-color: #6e5114;
+      width: 300px;
+      height: 300px;
+      margin-right: 600px;
+      border-radius: 5px;
+      margin-top: 0px;
+      margin-left: 100px;
+      box-shadow: 20px 20px 10px #2e1f00;">
     <form action="/register" method="post" style="padding-top: 50px;">
-        <div class="form-group">
-            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text"/>
-        </div>
-        <div class="form-group">
-            <input class="form-control" name="password" placeholder="Password" type="password"/>
-        </div>
-        <div class="form-group">
-            <input class="form-control" name="confirmation" placeholder="Confirm password" type="password"/>
-        </div>
-        <button class="btn btn-outline-warning" type="submit" style="width: auto;margin-left: auto;margin-top: 4px;">Register</button>
-        <br>
-        <div class="menu">
-            <a href="{{ url_for('register') }}" style="color: #ad9218;text-decoration: none;margin-top: 1px;">Register </a><span>|</span>
-            <a href="{{ url_for('login') }}" style="color: #ad9218;text-decoration: none;margin-top: 1px;">Login</a>
-          </div>    
+      <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text" />
+      </div>
+      <div class="form-group">
+        <input class="form-control" name="password" placeholder="Password" type="password" />
+      </div>
+      <div class="form-group">
+        <input class="form-control" name="confirmation" placeholder="Confirm password" type="password" />
+      </div>
+      <button class="btn btn-outline-warning" type="submit" style="width: auto; margin-left: auto; margin-top: 4px;">
+        Register
+      </button>
+      <br />
+      <div class="menu">
+        <a href="{{ url_for('register') }}" style="color: #ad9218; text-decoration: none; margin-top: 1px;">Register
+        </a><span>|</span>
+        <a href="{{ url_for('login') }}" style="color: #ad9218; text-decoration: none; margin-top: 1px;">Login</a>
+      </div>
     </form>
-</div>                
+  </div>
 </div>
-   
+
 {% endblock %}
