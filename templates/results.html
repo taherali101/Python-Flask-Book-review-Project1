@@ -16,14 +16,14 @@ align-items: baseline;">
     
     {% for book in books %}
     <div class="card border-info mb-3" style="max-width: 16rem;">
-        <div class="card-header bg-info border-info">{{book['title']}}</div>
-        <div class="card-body text-info">
+        <div class="card-header bg-info border-info" style="color:black;font-size:medium;">{{book['title']}}</div>
+        <div class="card-body bg-info">
           <h4 class="card-title">{{book['author']}}</h4>
           <h6 class="card-title">{{book['year']}}</h6>
           <h6 class="card-title">{{book['isbn']}}</h6>
         </div>
-        <div class="card-footer bg-info border-info">
-            <a href="/book/{{book['isbn']}}" class="card-link" style="color:black;font-size:medium;">Go to book page</a>
+        <div class="card-footer text-info border-info">
+            <a href="/book/{{book['isbn']}}" class="card-link">Go to book page</a>
         </div>
       </div>
 
