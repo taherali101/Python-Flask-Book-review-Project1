@@ -56,18 +56,18 @@
         </form>
 
         <!-- REVIEW LIST -->
-        <div id="userReviews" class="bg-transparent">
-            <h2></h2>
+        <div id="userReviews">
             {% for review in reviews %}
-            <div class="list-group bg-transparent">
-                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex bg-transparent w-100 justify-content-between">
-                        <h6 class="mb-1" style="color:burlywood">{{review['username']}} said...</h6>
+            <div class="list-group" style="background-color:#ad8059;border-color: #914300;">
+                <li class="list-group-item text-white list-group-item-action flex-column align-items-start">
+                    <div class="d-flex text-white w-100 justify-content-between">
+                        <h3 class="mb-1" >{{review['username']}} said...</h3>
                         <small>{{review['time']}}</small>
+                        <div class="dropdown-divider" style="color:#914300"></div> 
                     </div>
                     <p class="mb-1">{{review['comment']}}</p>
                     <small>Rated: {{review['rating']}}</small>
-                </a>
+                </li>
             </div>
             {% endfor %}
         </div>
