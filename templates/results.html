@@ -15,16 +15,27 @@ justify-content: space-around;
 align-items: baseline;">
     
     {% for book in books %}
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header bg-transparent border-success">{{book['title']}}</div>
+        <div class="card-body text-success">
+          <h5 class="card-title">by</h5>
+          <h5 class="card-title">{{book['author']}}</h5>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+            <a href="/book/{{book['isbn']}}" class="card-link">Go to book page</a>
+        </div>
+      </div>
+
+<!-- 
     <div class="card border-info mb-3" style="max-width: 16rem;">
         <div class="card-header bg-transparent border-info" style="float:left;">{{book['title']}}</div>
         <div class="card-body text-info" style="float:left;text-align:center;">
             <h5> by </h5>
-            <h5 class="card-title">{{book['author']}}</h5>
+            <h5 class="card-title"></h5>
         </div>
         <div class="card-footer bg-transparent border-success" style="text-align: center;">
-            <a href="/book/{{book['isbn']}}" class="card-link">Go to book page</a>
         </div>
-      </div>
+      </div> -->
     {% endfor %}
 </div>
 {% endblock %}
