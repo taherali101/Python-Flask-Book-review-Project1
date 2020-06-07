@@ -5,14 +5,14 @@
 {% endblock %}
 
 {% block content %}
-<section style="background-color: #c6a78e;border-color:#914300;border: 1rem;">		
-    <div class="container" style="background-color: #c6a78e;border-color:#914300;border: 1rem;">
+<section>		
+    <div class="container border border-secondary" style="background-color: #c6a78e;border-color:#914300;border: 1rem;">
         <div id="home" class="jumbotron" style="text-align: center;border: 1rem;background-color: #c6a78e;border-color:#914300;">
             <div class="row book-container">
                 <div class="col-sm-4">
                     <img src="http://covers.openlibrary.org/b/isbn/{{bookInfo[0]['isbn']}}-M.jpg" style="border: 5in;border-color: #3a3a3a;" width="130px">    
                 </div>
-                <div class="container" style="border:1rem; border-color:#914300; display:flex;text-align: center;justify-content: center;width: 300px;height:300px ;" >
+                <div class="container" style="text-align: center;justify-content: center;width: 300px;height:300px ;" >
                     <div id="home" style="text-align: center;border:1rem; border-color:#914300;" >
                         <h2 style="color: #3a3a3a;">{{bookInfo[0]['title']}}</h1>
                         <h4 style="color: #3a3a3a;">Author: {{bookInfo[0]['author']}}</h4>
@@ -35,9 +35,9 @@
             <h3><u>Make your own review!</u></h3>
     <br>
         <!-- REVIEW FORM -->
-        <form method="POST" class="form-border" style="border: 1rem;border-color: #914300;">
+        <form method="POST" class="form-border" >
             <div class="form-row">
-                <div class="form-group col-sm">
+                <div class="form-group col-sm" style="border: 1rem;border-color: #914300;">
                     <label for="rating" style="color:#3a3a3a;font-size: 15pt;">Rate this book</label>
                     <select id="rating" name="rating" class="form-control" required>
                         <option value="1">1</option>
@@ -56,7 +56,7 @@
             </div>
         </form>
         <br>
-        <h4><u>Users Reviews</u>u></h4>
+        <h3><u>Users Reviews</u></h3>
 
         <!-- REVIEW LIST -->
         <br>
