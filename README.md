@@ -5,15 +5,7 @@
 
 ## Use the app on Heroku
 
-### https://book-reviews-cs50-project1.herokuapp.com/
-
-![](https://i.imgur.com/mB3cLV1.png)
-
-
-![](https://i.imgur.com/MgO93MJ.png)
-
-
-![](https://i.imgur.com/Zy7C3Oq.png)
+### https://taher-project1-books.herokuapp.com/login
 
 ## Usage
 
@@ -25,15 +17,16 @@
 
 ```bash
 # Clone repo
-$ git clone https://github.com/marcorichetta/cs50-project1.git
+$ git clone https://github.com/taherali101/Python-Flask-Book-review-Project1.git
 
-$ cd cs50-project1
+$ cd project1
 
 # Create a virtualenv (Optional but reccomended)
 $ python3 -m venv myvirtualenv
 
 # Activate the virtualenv
 $ source myvirtualenv/bin/activate (Linux)
+myvirtualenv\Scripts\activate(windows)
 
 # Install all dependencies
 $ pip install -r requirements.txt
@@ -43,6 +36,10 @@ $ export FLASK_APP = application.py # flask run
 $ export DATABASE_URL = Heroku Postgres DB URI
 $ export GOODREADS_KEY = Goodreads API Key. # More info: https://www.goodreads.com/api
 ```
+
+## Steps to run
+### 1.First run python import.py
+### 2.flask run
 
 ### DB Schema
 
