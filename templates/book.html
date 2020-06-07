@@ -8,15 +8,35 @@
 <section>		
     <div class="container">
         <div id="home" class="jumbotron" style="text-align: center;margin-top: 50px;">
-            <h1>CS-50 Project 0</h1>
-            <h3>Student: Liuba Atamaniuk</h3>
-            <h4>Date: 2018</h4>
+            <div class="row book-container">
+                <div class="col-sm-4">
+                    <img src="http://covers.openlibrary.org/b/isbn/{{bookInfo[0]['isbn']}}-M.jpg" style="border: 1in;border-color: black;" width="130px">    
+                </div>
+                <div class="container" style="display: flex;text-align: center;justify-content: center;width: 300px;height:300px ;" >
+                    <div id="home" style="text-align: center;margin-top: 40px;" >
+                        <h1 style="color: black;">{{bookInfo[0]['title']}}</h1>
+                        <h4 style="color: black;">Author: {{bookInfo[0]['author']}}</h4>
+                        <h4 style="color: black;">Published: {{bookInfo[0]['year']}}</h4>
+                        <h4 style="color: black;">ISBN-10: {{bookInfo[0]['isbn']}}</h4>  
+                    </div>
+                  </div>
+            
+                <!--GOODREADS REVIEWS -->
+                <div class="col-sm-4">
+                    <img class="mb-3" src="../static/goodreads.jpg" alt="Goodreads" width="200" height="45">
+                    <h5>Nº of Ratings: {{bookInfo[1]['work_ratings_count']}}</h5>
+                    <h5>Average Rating: {{bookInfo[1]['average_rating']}}</h5>
+                    <h5>
+                        <a href="https://www.goodreads.com/search?q={{bookInfo[0]['title']}}" style="color:black">Goodreads page</a>
+                    </h5>
+                </div>
+            </div>
         </div>
     </div>		
 </section>
 
 
-    <div class="row book-container">
+    <!-- <div class="row book-container">
         <div class="col-sm-4">
             <img src="http://covers.openlibrary.org/b/isbn/{{bookInfo[0]['isbn']}}-M.jpg" style="border: 1in;border-color: black;" width="130px">    
         </div>
@@ -30,7 +50,7 @@
           </div>
     
         <!--GOODREADS REVIEWS -->
-        <div class="col-sm-4">
+        <!-- <div class="col-sm-4">
             <img class="mb-3" src="../static/goodreads.jpg" alt="Goodreads" width="200" height="45">
             <h5>Nº of Ratings: {{bookInfo[1]['work_ratings_count']}}</h5>
             <h5>Average Rating: {{bookInfo[1]['average_rating']}}</h5>
@@ -38,7 +58,8 @@
                 <a href="https://www.goodreads.com/search?q={{bookInfo[0]['title']}}" style="color:whitesmoke">Goodreads page</a>
             </h5>
         </div>
-    </div>
+    </div> --> 
+
     <h3>Make your own review!</h3>
     <br>
         <!-- REVIEW FORM -->
