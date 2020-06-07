@@ -7,7 +7,7 @@
 {% block content %}
 <section>		
     <div class="container border border-secondary" style="background-color: #c6a78e;border-color:#914300;border: 1rem;">
-        <div id="home" class="jumbotron" style="text-align: center;border: 1rem;background-color: #c6a78e;border-color:#914300;">
+        <div id="home" class="jumbotron border border-secondary" style="text-align: center;border: 1rem;background-color: #c6a78e;border-color:#914300;">
             <div class="row book-container">
                 <div class="col-sm-4">
                     <img src="http://covers.openlibrary.org/b/isbn/{{bookInfo[0]['isbn']}}-M.jpg" style="border: 5in;border-color: #3a3a3a;" width="130px">    
@@ -66,7 +66,7 @@
                 <li class="list-group-item list-group-item-action bg-transparent flex-column align-items-start" style="border-color: #914300;">
                     <div class="d-flex w-100 justify-content-between bg-transparent" style="border-color: #914300;">
                         <h4 class="mb-1" >{{review['username']}} said...</h4>
-                        <hr style="color:#914300"></hr> 
+                        <hr style="color:#914300" class="my-4">
                     </div>
                     <h4 class="mb-1">{{review['comment']}}</h4>
                     <small>Rated: {{review['rating']}}</small>
