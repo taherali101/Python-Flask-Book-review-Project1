@@ -6,14 +6,13 @@
 
 {% block content %}
 <section>		
-    <!-- <div class="container border border-secondary" style="background-color: #c6a78e;border-color:#914300;border: 1rem;"> -->
-        <div id="home" class="jumbotron border border-secondary" style="text-align: center;border: 1rem;background-color: #c6a78e;border-color:#914300;">
+    <div id="home" class="jumbotron" style="text-align: center;background-color: #c6a78e;border-color:#914300;border-style: solid;border-radius: 1rem;">
             <div class="row book-container">
                 <div class="col-sm-4">
-                    <img src="http://covers.openlibrary.org/b/isbn/{{bookInfo[0]['isbn']}}-M.jpg" style="border: 5in;border-color: #3a3a3a;" width="130px">    
+                    <img src="http://covers.openlibrary.org/b/isbn/{{bookInfo[0]['isbn']}}-M.jpg" style="border-radius: 2in;border-color: #3a3a3a;" width="130px">    
                 </div>
                 <div class="container" style="text-align: center;justify-content: center;width: 300px;height:300px ;" >
-                    <div id="home" style="text-align: center;border:1rem; border-color:#914300;" >
+                    <div id="home" style="text-align: center;border-radius:1rem; border-color:#914300;" >
                         <h2 style="color: #3a3a3a;">{{bookInfo[0]['title']}}</h1>
                         <h4 style="color: #3a3a3a;">Author: {{bookInfo[0]['author']}}</h4>
                         <h4 style="color: #3a3a3a;">Published: {{bookInfo[0]['year']}}</h4>
@@ -35,9 +34,9 @@
             <h3><u>Make your own review!</u></h3>
     <br>
         <!-- REVIEW FORM -->
-        <form method="POST" class="form-border" >
+        <form method="POST" style="border-color: #914300;border-style: solid;border-radius: 1rem;padding: 0.5rem;">
             <div class="form-row">
-                <div class="form-group col-sm" style="border: 1rem;border-color: #914300;">
+                <div class="form-group col-sm" >
                     <label for="rating" style="color:#3a3a3a;font-size: 15pt;">Rate this book</label>
                     <select id="rating" name="rating" class="form-control" required>
                         <option value="1">1</option>
@@ -65,11 +64,11 @@
             <div class="list-group bg-transparent" style="border-color: #914300;">
                 <li class="list-group-item list-group-item-action bg-transparent flex-column align-items-start" style="border-color: #914300;">
                     <div class="d-flex w-100 justify-content-between bg-transparent" style="border-color: #914300;">
-                        <h4 class="mb-1" >{{review['username']}} said...</h4>
+                        <h4 class="mb-1" style="color:#3a3a3a">{{review['username']}} said...</h4>
                         <hr style="color:#914300" class="my-4">
                     </div>
-                    <h4 class="mb-1">{{review['comment']}}</h4>
-                    <small>Rated: {{review['rating']}}</small>
+                    <h4 class="mb-1" style="color:#3a3a3a">{{review['comment']}}</h4>
+                    <small style="color:#3a3a3a">Rated: {{review['rating']}}</small>
                 </li>
             </div>
             {% endfor %}
